@@ -43,11 +43,14 @@ SqlSession sqlSession;
 		@Override
 		public BoardVO mapRow(ResultSet rs, int rowNum) throws SQLException {
 			BoardVO vo = new BoardVO();
-			vo.setSeq(rs.getInt("seq"));
+			vo.setId(rs.getInt("id"));
 			vo.setCategory(rs.getString("category"));
-			vo.setTitle(rs.getString("title"));
+			vo.setTeamname(rs.getString("teamname"));
+			vo.setNumpeople(rs.getString("numpeople"));
 			vo.setContent(rs.getString("content"));
 			vo.setWriter(rs.getString("writer"));
+			vo.setStartdate(rs.getString("startdate"));
+			vo.setStarttime(rs.getString("starttime"));
 			vo.setRegdate(rs.getDate("regdate"));
 			return vo;
 		}

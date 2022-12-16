@@ -32,13 +32,16 @@
 </head>
 <body>
 
-<h1>새 글쓰기</h1>
+<h1>매칭 조건 작성</h1>
 <form action="addok" method="post">
 <table id="edit">
-<tr><td>카테고리</td><td><input type="text" name="category"/></td></tr>
-<tr><td>제목</td><td><input type="text" name="title"/></td></tr>
-    <tr><td>글쓴이</td><td><input type="text" name="writer"/></td></tr>
-<tr><td>내용</td><td><textarea cols="50" rows="5" name="content"></textarea></td></tr>
+<tr><td>카테고리</td><td><input type="radio" name="category"/></td></tr>
+<tr><td>팀명</td><td><input type="text" name="title"/></td></tr>
+    <tr><td>작성자</td><td><input type="text" name="writer"/></td></tr>
+    <tr><td>희망날짜</td><td><input type="date" name="writer"/></td></tr>
+    <tr><td>시작시간</td><td><input type="time" name="writer"/></td></tr>
+    <tr><td>인원 수</td><td><input type="number" name="writer"/></td></tr>
+<tr><td>요구사항</td><td><textarea cols="50" rows="5" name="content"></textarea></td></tr>
 </table>
     <button type="button" onclick="location.href='list'">목록보기</button>
     <button type="submit">등록하기</button>

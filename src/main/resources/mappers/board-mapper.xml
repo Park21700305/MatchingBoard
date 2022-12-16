@@ -4,22 +4,25 @@
 
 <mapper namespace="Board">
     <insert id="insertBoard">
-        insert into BOARD(category, title, writer, content)
+        insert into MatchingBoard(category, teamname, writer, content, startdate, starttime,
+                                  numpeople)
         values
-        (#{category}, #{title}, #{writer}, #{content})
+        (#{category}, #{teamname}, #{writer}, #{content}, #{startdate}, #{starttime},
+         #{numpeople})
     </insert>
     <update id="updateBoard">
-        update BOARD
-        set title=#{title}, writer=#{writer}, content=#{content}, category=#{category}
-        where seq=#{seq}
+        update MatchingBoard
+        set = category=#{category}, teamname=#{teamname}, writer=#{writer}, content=#{content},
+            startdate=#{startdate}, starttime=#{starttime}, numpeople=#{numpeople}
+        where id=#{id}
     </update>
     <delete id="deleteBoard">
-        delete from BOARD where seq=#{seq}
+        delete from MatchingBoard where id=#{id}
     </delete>
     <select id="getBoard" resultType="board">
-        select * from BOARD where seq=#{seq}
+        select * from MatchingBoard where id=#{id}
     </select>
     <select id="getBoardList" resultType="board">
-        select * from BOARD order by seq desc
+        select * from MatchingBoard order by id desc
     </select>
 </mapper>

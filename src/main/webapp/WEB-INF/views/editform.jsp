@@ -33,19 +33,28 @@
 <body>
 <h1>게시물 수정</h1>
 <form:form modelAttribute="u" method="POST" action="../editok">
-	<form:hidden path ="seq"/>
+	<form:hidden path ="id"/>
 <table id="edit">
 	<tr>
-		<td>카테고리</td><td><form:input path ="category"/></td>
+		<td>카테고리</td><td><form:input type="radio" path ="category"/></td>
 	</tr>
 	<tr>
-		<td>제목</td><td><form:input path ="title"/></td>
+		<td>팀명</td><td><form:input path ="teamname"/></td>
 	</tr>
 	<tr>
-		<td>글쓴이</td><td><form:input type="text" path = "writer"/></td>
+		<td>작성자</td><td><form:input type="text" path = "writer"/></td>
 	</tr>
 	<tr>
-		<td>내용</td><td><form:textarea cols="50" rows="5" path = "content" /></td>
+		<td>희망날짜</td><td><form:input type="date" path = "startdate"/></td>
+	</tr>
+	<tr>
+		<td>희망시간</td><td><form:input type="time" path = "starttime"/></td>
+	</tr>
+	<tr>
+		<td>인원 수</td><td><form:input type="number" path = "numpeople"/></td>
+	</tr>
+	<tr>
+		<td>요구사항</td><td><form:textarea cols="50" rows="5" path = "content" /></td>
 	</tr>
 </table>
 	<input type="submit" value="수정하기"/>
