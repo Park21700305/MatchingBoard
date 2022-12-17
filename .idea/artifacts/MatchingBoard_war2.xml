@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="MatchingBoard:war2">
+    <output-path>$PROJECT_DIR$/out/artifacts/MatchingBoard_war2</output-path>
+    <root id="archive" name="p2_21700305_final.war">
+      <element id="artifact" artifact-name="MatchingBoard:war exploded" />
+    </root>
+  </artifact>
+</component>
