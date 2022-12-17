@@ -52,6 +52,7 @@ SqlSession sqlSession;
 			vo.setStartdate(rs.getString("startdate"));
 			vo.setStarttime(rs.getString("starttime"));
 			vo.setRegdate(rs.getDate("regdate"));
+			vo.setState(rs.getString("state"));
 			return vo;
 		}
 	}

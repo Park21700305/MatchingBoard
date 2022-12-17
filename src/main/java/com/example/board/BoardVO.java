@@ -12,6 +12,15 @@ public class BoardVO {
 	private String writer;
 	private String content;
 	private Date regdate;
+	private String state;
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
 
 	public int getId() {
 		return id;

@@ -13,23 +13,24 @@
             width: 100%;
         }
         #list td, #list th {
-            border: 1px solid #ddd;
+            border: 1px solid beige;
             padding: 8px;
             text-align:center;
         }
-        #list tr:nth-child(even){background-color: #f2f2f2;}
-        #list tr:hover {background-color: #ddd;}
+        #list tr:nth-child(even){background-color: beige;}
+        #list tr:hover {background-color: beige;}
         #list th {
             padding-top: 12px;
             padding-bottom: 12px;
             text-align: center;
-            background-color: #006bb3;
-            color: white;
+            background-color: navy;
+            color: beige;
         }
 
         label{display: inline-block;}
         label{width: 130px}
-        button{background-color: #006bb3; color: #f2f2f2; font-size: 15px}
+        button{background-color: navy; color: beige; font-size: 15px}
+
     </style>
 </head>
 <body>
@@ -44,8 +45,9 @@
         <th>Content</th>
         <th>Number of People</th>
         <th>Date</th>
-        <th>Time</th>
+        <th>Start Time</th>
         <th>Regdate</th>
+        <th>Reservation</th>
         <th>Edit</th>
         <th>Delete</th>
     </tr>
@@ -61,8 +63,9 @@
             <td>${u.startdate}</td>
             <td>${u.starttime}</td>
             <td>${u.regdate}</td>
-            <td><a href="editform/${u.seq}">Edit</a></td>
-            <td><a href="javascript:delete_ok('${u.seq}')">Delete</a></td>
+            <td>${u.state}</td>
+            <td><a href="editform/${u.id}">Edit</a></td>
+            <td><a href="javascript:delete_ok('${u.id}')">Delete</a></td>
         </tr>
     </c:forEach>
 </table>
